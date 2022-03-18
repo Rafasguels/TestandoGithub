@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03 - Rafael Vieira - RGM:27891135</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/infracoes.js"></script>
+</head>
+    <style>
+        .infra_grave{
+            color:red;
+        }
+        .infra_padrao{
+            color:black;
+        }
+    </style>
+<body>
+    <script>  
+        textoDetran = "";
+        corInfracao = "";
+
+        for(var i=0; i < detran.length; i++){
+         
+            if(detran[i].pontos >=7){
+                corInfracao = "class='infra_grave'";
+            }else{                   
+               corInfracao = "class='infra_padrao'";
+            }                    
+             
+            textoDetran = textoDetran +"<p>";
+            textoDetran = textoDetran +"<span "+corInfracao+">";
+            textoDetran = textoDetran + "Código = "+detran[i].cod + "</br>";
+            textoDetran = textoDetran + "Descrição = "+detran[i].descricao+ "</br>";
+            textoDetran = textoDetran + "Gravidade = "+detran[i].gravidade+ "</br>";
+            textoDetran = textoDetran + "Pontos na carteira = "+detran[i].pontos+ "</br>";
+            textoDetran = textoDetran + "Valor R$ "+detran[i].valor+ "</br>";
+            textoDetran = textoDetran +"</span>";
+            textoDetran = textoDetran +"</p>";
+         }           
+
+         document.write(textoDetran);
+     </script>
+
+</body>
+</html>
